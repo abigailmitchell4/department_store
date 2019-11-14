@@ -42,8 +42,8 @@ class DepartmentsController < ApplicationController
 
   def destroy
   #DELETE	/departments/:id
-  @department.destroy
-  redirect_to departments_path
+    @department.destroy
+    redirect_to departments_path
   end
 
   private

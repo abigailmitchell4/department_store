@@ -1,6 +1,9 @@
-<h1><%= @item.id ? 'Edit item' : 'Create item' %></h1>
+<div class='container'>
+  <h1><%= @item.id ? 'Edit item' : 'Create item' %></h1>
+</div>
 <hr />
 
+<div class='container'>
 <%= form_for [@department, @item] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, required: true, autofocus: true %>
@@ -13,5 +16,8 @@
   <br />
   <%= f.submit %>
 <% end %>
+</div>
 <br/>
- <%# <%= link_to 'Back', department_item_path%> 
+<div class='links'>
+  <%=link_to 'Back to Item', department_items_path([@department, @item])%>
+</div>

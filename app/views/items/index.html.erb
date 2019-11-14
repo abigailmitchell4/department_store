@@ -1,9 +1,16 @@
-<h1>Click an Item for Details</h1>
-<%= link_to 'Create a new Item', new_department_item_path(@department) %>
-<ul>
-  <% @items.each do |i| %>
-    <li><%= link_to i.name, department_item_path(@department, i) %></li>
-  <% end %>
-</ul>
-<br/>
-<%= link_to 'Back To Items', department_path(@department) %>
+<div class='container'>
+  <h1>Click an Item for Details</h1>
+</div>
+<div class='links'>
+  <span><%= link_to 'Create a new Item', new_department_item_path(@department) %></span>
+<div>
+<div class='container'>
+  <ul>
+    <% @items.each do |i| %>
+      <li><%= link_to i.name, department_item_path(@department, i) %></li>
+    <% end %>
+  </ul>
+</div>
+<div class='links'>
+  <%= link_to 'Back to Department', department_path(@department) %>
+</div>
